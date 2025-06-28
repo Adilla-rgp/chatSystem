@@ -42,14 +42,14 @@ Este projeto foi desenvolvido como atividade prática da disciplina de Linguagem
 
 ### 1. Clone o repositório
 ```bash
-git clone https://github.com/seu-usuario/sistema-chat-java.git
-cd sistema-chat-java
+git clone [https://github.com/Adilla-rgp/chatSystem.git]
+cd chatSystem
 ```
 
 ### 2. Compile o projeto
 ```bash
 # Compilar todas as classes
-javac -d bin src/main/java/br/edu/chatsystem/**/*.java
+javac -d bin src/main/java/br/edu/chatsystem/server/*.java src/main/java/br/edu/chatsystem/auth/*.java src/main/java/br/edu/chatsystem/common/*.java src/main/java/br/edu/chatsystem/client/*.java
 
 # Ou usando o script de build (se disponível)
 ./build.sh
@@ -58,12 +58,14 @@ javac -d bin src/main/java/br/edu/chatsystem/**/*.java
 ### 3. Execute o servidor
 ```bash
 java -cp bin br.edu.chatsystem.server.ChatServer
+
 ```
 
 ### 4. Execute o(s) cliente(s)
 ```bash
 # Em outro terminal
 java -cp bin br.edu.chatsystem.client.ChatClient
+
 ```
 
 ## Comandos Disponíveis
@@ -92,7 +94,6 @@ src/main/java/br/edu/chatsystem/
 ├── server/          # Servidor e gerenciamento de conexões
 │   ├── ChatServer.java
 │   ├── ClientHandler.java
-│   └── ConnectionManager.java
 ├── room/            # Gerenciamento de salas
 │   ├── Room.java
 │   ├── RoomManager.java
